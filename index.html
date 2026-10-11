@@ -40,3 +40,33 @@
     transform: translateY(-50%);
   }
   .sub {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: calc(var(--u) * 33.5);
+    line-height: 1;
+  }
+  .arriba { top: calc(50% - var(--u) * 181); }
+  .abajo  { top: calc(50% + var(--u) * 97); }
+
+  h1.texto {
+    top: calc(50% - var(--u) * 28);
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(var(--u) * 122);
+    letter-spacing: -0.055em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="pieza lineas-tl"><img src="Linea.png" alt=""></div>
+  <div class="pieza lineas-br"><img src="Linea.png" alt=""></div>
+  <div class="pieza puntos-tr"><img src="Punto.png" alt=""></div>
+  <div class="pieza puntos-bl"><img src="Punto.png" alt=""></div>
+
+  <p class="texto sub arriba">insertar texto</p>
+  <h1 class="texto">Diego Lujan Avila</h1>
+  <p class="texto sub abajo">insertar texto</p>
+</body>
+</html>
