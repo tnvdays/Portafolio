@@ -11,14 +11,18 @@
   html,body{margin:0;height:100%;overflow:hidden;background:#fff}
   body{display:grid;place-items:center}
   svg{width:100vw;height:auto;display:block}
+  .cursor{animation:parpadeo 1.06s steps(1,end) infinite}
+  @keyframes parpadeo{0%{opacity:1}50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.cursor{animation:none}}
   text{font-family:"Abril Fatface","Bodoni MT","Didot",Georgia,serif;fill:#000}
 </style>
 </head>
 <body>
+  <!-- El texto se ajusta al ancho con textLength, así ocupa casi toda la pantalla en cualquier tamaño -->
   <svg viewBox="0 190 1159 230" role="img" aria-labelledby="t">
     <title id="t">Diego Lujan Avila. Electronica, Software.</title>
     <text x="14" y="325" font-size="138" textLength="1086" lengthAdjust="spacing">Diego Lujan Avila</text>
-    <rect x="1118" y="215" width="7" height="126"/>
+    <rect class="cursor" x="1118" y="215" width="7" height="126"/>
     <text x="425" y="395" font-size="32" textLength="305" lengthAdjust="spacing">Electronica|Software</text>
   </svg>
 </body>
