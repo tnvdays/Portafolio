@@ -6,59 +6,33 @@
 <title>Portafolio | Diego Lujan Avila</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Outfit:wght@400&display=swap" rel="stylesheet">
 <style>
-  html, body { height: 100%; margin: 0; background: #e6e6e6; overflow: hidden; }
-  body { display: flex; align-items: center; justify-content: center; }
-
-  /* Escenario 16:9 que se escala a la pantalla */
-  .stage {
+  :root {
+    --u: min(calc(100vw / 1155), calc(100vh / 657));
+  }
+  html, body { height: 100%; margin: 0; }
+  body {
     position: relative;
-    width: min(100vw, 100vh * 16 / 9);
-    aspect-ratio: 16 / 9;
-    container-type: size;
     background: #e6e6e6;
     overflow: hidden;
+    color: #1f1f1f;
   }
 
-  /* Capas decorativas (mismas posiciones que la referencia) */
-  .lineas, .puntos { position: absolute; display: block; pointer-events: none; user-select: none; }
-  .lineas { left: -24.7%; top: -35.5%; width: 146.5%; }
-  .puntos { left: 4.7%;  top: 9.7%;   width: 90%; }
+  .pieza { position: absolute; overflow: hidden; pointer-events: none; user-select: none; }
+  .pieza img { position: absolute; max-width: none; display: block; }
 
-  .contenido {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center; color: #1f1f1f;
-  }
-  .sub {
-    font-family: "Outfit", system-ui, sans-serif;
-    font-weight: 400;
-    font-size: 2.9cqw;
-    margin: 0;
-  }
-  h1 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-weight: 800;
-    font-size: 13.2cqw;
-    letter-spacing: -0.055em;
-    line-height: 1;
-    margin: 4.2cqw 0 4.6cqw;
-    white-space: nowrap;
-  }
-</style>
-</head>
-<body>
-  <main class="stage">
-    <img class="lineas" src="Linea.png" alt="">
-    <img class="puntos" src="Punto.png" alt="">
+  .lineas-tl { top: 0; left: 0; width: calc(var(--u) * 470); height: calc(var(--u) * 380); }
+  .lineas-tl img { width: calc(var(--u) * 1692); left: calc(var(--u) * -285); top: calc(var(--u) * -233); }
 
-    <div class="contenido">
-      <p class="sub">insertar texto</p>
-      <h1>Diego Lujan Avila</h1>
-      <p class="sub">insertar texto</p>
-    </div>
-  </main>
-</body>
-</html>
+  .lineas-br { bottom: 0; right: 0; width: calc(var(--u) * 450); height: calc(var(--u) * 380); }
+  .lineas-br img { width: calc(var(--u) * 1692); left: calc(var(--u) * -995); top: calc(var(--u) * -510); }
+
+  .puntos-tr { top: 0; right: 0; width: calc(var(--u) * 250); height: calc(var(--u) * 180); }
+  .puntos-tr img { width: calc(var(--u) * 1040); left: calc(var(--u) * -851); top: calc(var(--u) * 64); }
+
+  .puntos-bl { bottom: 0; left: 0; width: calc(var(--u) * 250); height: calc(var(--u) * 180); }
+  .puntos-bl img { width: calc(var(--u) * 1040); left: calc(var(--u) * 54); top: calc(var(--u) * -413); }
+
+  .texto {
+    position:
