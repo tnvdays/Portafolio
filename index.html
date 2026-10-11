@@ -2,27 +2,63 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portafolio | Diego Lujan Avila</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  html,body{margin:0;height:100%;overflow:hidden;background:#fff}
-  body{display:grid;place-items:center}
-  svg{width:100vw;height:auto;display:block}
-  .cursor{animation:parpadeo 1.06s steps(1,end) infinite}
-  @keyframes parpadeo{0%{opacity:1}50%{opacity:0}}
-  text{font-family:"Abril Fatface","Bodoni MT","Didot",Georgia,serif;fill:#000}
+  html, body { height: 100%; margin: 0; background: #e6e6e6; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+
+  /* Escenario 16:9 que se escala a la pantalla */
+  .stage {
+    position: relative;
+    width: min(100vw, 100vh * 16 / 9);
+    aspect-ratio: 16 / 9;
+    container-type: size;
+    background: #e6e6e6;
+    overflow: hidden;
+  }
+
+  /* Capas decorativas (mismas posiciones que la referencia) */
+  .lineas, .puntos { position: absolute; display: block; pointer-events: none; user-select: none; }
+  .lineas { left: -24.7%; top: -35.5%; width: 146.5%; }
+  .puntos { left: 4.7%;  top: 9.7%;   width: 90%; }
+
+  .contenido {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; color: #1f1f1f;
+  }
+  .sub {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 2.9cqw;
+    margin: 0;
+  }
+  h1 {
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 13.2cqw;
+    letter-spacing: -0.055em;
+    line-height: 1;
+    margin: 4.2cqw 0 4.6cqw;
+    white-space: nowrap;
+  }
 </style>
 </head>
 <body>
-  <!-- El texto se ajusta al ancho con textLength, así ocupa casi toda la pantalla en cualquier tamaño -->
-  <svg viewBox="0 190 1159 230" role="img" aria-labelledby="t">
-    <title id="t">Diego Lujan Avila. Electronica, Software.</title>
-    <text x="14" y="325" font-size="138" textLength="1086" lengthAdjust="spacing">Diego Lujan Avila</text>
-    <rect class="cursor" x="1118" y="215" width="7" height="126"/>
-    <text x="425" y="395" font-size="32" textLength="305" lengthAdjust="spacing">Electronica|Software</text>
-  </svg>
+  <main class="stage">
+    <img class="lineas" src="Linea.png" alt="">
+    <img class="puntos" src="Punto.png" alt="">
+
+    <div class="contenido">
+      <p class="sub">insertar texto</p>
+      <h1>Diego Lujan Avila</h1>
+      <p class="sub">insertar texto</p>
+    </div>
+  </main>
 </body>
 </html>
