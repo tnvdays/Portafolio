@@ -1,2 +1,31 @@
 <!DOCTYPE html>
-
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio | Diego Lujan Avila</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#e9e9e9}
+  body{display:grid;place-items:center}
+  /* Escenario de 1150x647: todas las piezas se colocan en % para escalar juntas */
+  .escenario{position:relative;width:min(100vw,100vh*1150/647);aspect-ratio:1150/647}
+  .p{position:absolute;display:block;height:auto;user-select:none;pointer-events:none}
+  .mul{mix-blend-mode:multiply} /* el blanco del video queda transparente sobre el papel */
+</style>
+</head>
+<body>
+<main class="escenario" aria-label="Portafolio de Diego Lujan Avila">
+  <img class="p" src="folder.png" alt="" style="left:19.5652%;top:11.4374%;width:64.4983%">
+  <img class="p" src="clip2.png" alt="" style="left:21.2174%;top:27.9753%;width:47.0474%">
+  <img class="p" src="gato.png" alt="" style="left:16.4348%;top:44.6677%;width:17.5511%">
+  <img class="p" src="papeles.png" alt="" style="left:24.9565%;top:18.2380%;width:52.7665%">
+  <img class="p" src="beige.png" alt="" style="left:24.7826%;top:18.0835%;width:52.9846%">
+  <video class="p mul" src="discos.mp4" autoplay muted loop playsinline aria-hidden="true" style="left:43.7391%;top:29.6754%;width:30.8383%"></video>
+  <img class="p" src="papeles2.png" alt="" style="left:26.9565%;top:26.5842%;width:25.5130%">
+  <img class="p" src="crema.png" alt="" style="left:24.8696%;top:17.3107%;width:52.7665%">
+  <img class="p" src="garabato.png" alt="" style="left:27.3043%;top:83.6167%;width:7.4783%">
+  <img class="p" src="etiquetas.png" alt="" style="left:64.8696%;top:15.1468%;width:11.6265%">
+  <img class="p" src="clip1.png" alt="" style="left:20.6957%;top:29.3663%;width:47.2426%">
+</main>
+</body>
+</html>
